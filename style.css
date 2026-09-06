@@ -1,0 +1,1658 @@
+/* ==================================================
+   RESET
+================================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    background: #000;
+    color: #fff;
+
+    font-family:
+        "Montserrat",
+        sans-serif;
+
+    overflow: hidden;
+}
+
+button {
+    font-family: inherit;
+}
+
+
+/* ==================================================
+   LOADING
+================================================== */
+
+#loadingScreen {
+
+    position: fixed;
+
+    inset: 0;
+
+    z-index: 9999;
+
+    background: #000;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    flex-direction: column;
+
+    transition:
+        opacity 1s ease;
+
+}
+
+
+.loading-logo {
+
+    color: #e50914;
+
+    font-size: 35px;
+
+    font-weight: 700;
+
+    letter-spacing: 8px;
+
+    margin-bottom: 25px;
+
+}
+
+
+.loading-bar {
+
+    width: 180px;
+
+    height: 2px;
+
+    background: #2b0808;
+
+}
+
+
+#loadingProgress {
+
+    width: 0%;
+
+    height: 100%;
+
+    background: #e50914;
+
+}
+
+
+/* ==================================================
+   INTRO
+================================================== */
+
+.intro-screen {
+
+    position: fixed;
+
+    inset: 0;
+
+    z-index: 500;
+
+    overflow: hidden;
+
+    background: #050000;
+
+    transition:
+        opacity 1s ease;
+
+}
+
+
+.intro-bg {
+
+    position: absolute;
+
+    inset: 0;
+
+    background:
+
+        radial-gradient(
+            circle at center,
+            rgba(120,0,20,.45),
+            transparent 45%
+        ),
+
+        linear-gradient(
+            135deg,
+            #160004,
+            #000,
+            #100002
+        );
+
+    animation:
+        introZoom 10s
+        infinite alternate;
+
+}
+
+
+.intro-dark {
+
+    position: absolute;
+
+    inset: 0;
+
+    background:
+
+        radial-gradient(
+            ellipse at center,
+            transparent 10%,
+            rgba(0,0,0,.85) 100%
+        );
+
+}
+
+
+.intro-content {
+
+    position: relative;
+
+    z-index: 5;
+
+    width: 100%;
+
+    height: 100%;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+
+}
+
+
+.intro-label {
+
+    font-size: 12px;
+
+    letter-spacing: 5px;
+
+    color: #aaa;
+
+    margin-bottom: 25px;
+
+}
+
+
+/* ==================================================
+   THEODORE INTRO TITLE
+   MEDIUM DESKTOP SIZE
+================================================== */
+
+.intro-content h1 {
+
+    font-family:
+        "Great Vibes",
+        cursive;
+
+    font-weight: 400;
+
+    /* Medium cinematic size */
+    font-size:
+        clamp(80px, 12vw, 180px);
+
+    line-height: .8;
+
+    color: #eee;
+
+    text-shadow:
+        0 4px 25px rgba(0,0,0,.8);
+
+}
+
+
+.intro-content h1 span {
+
+    display: block;
+
+}
+
+
+.intro-content h1 strong {
+
+    display: block;
+
+    font-weight: 400;
+
+    color: #b20710;
+
+}
+
+
+.intro-content p {
+
+    margin-top: 50px;
+
+    font-family:
+        "Cormorant Garamond",
+        serif;
+
+    font-size: 25px;
+
+    line-height: 1.5;
+
+    color: rgba(255,255,255,.75);
+
+}
+
+
+.headphone-text {
+
+    margin-top: 22px;
+
+    font-size: 9px;
+
+    letter-spacing: 2px;
+
+    color: #555;
+
+}
+
+
+/* ==================================================
+   BUTTONS
+================================================== */
+
+.watch-button {
+
+    margin-top: 30px;
+
+    border: none;
+
+    background: #fff;
+
+    color: #000;
+
+    padding: 13px 28px;
+
+    border-radius: 4px;
+
+    cursor: pointer;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    display: flex;
+
+    gap: 12px;
+
+    align-items: center;
+
+    transition: .3s;
+
+}
+
+
+.watch-button:hover {
+
+    background: #e50914;
+
+    color: white;
+
+    transform: scale(1.05);
+
+}
+
+
+/* ==================================================
+   HEARTS
+================================================== */
+
+.hearts {
+
+    position: absolute;
+
+    inset: 0;
+
+    pointer-events: none;
+
+}
+
+
+.hearts span {
+
+    position: absolute;
+
+    bottom: -50px;
+
+    color: #d5092d;
+
+    opacity: 0;
+
+    animation:
+        heartsUp
+        10s
+        infinite;
+
+}
+
+
+.hearts span:nth-child(1) {
+
+    left: 8%;
+
+    animation-delay: 1s;
+
+}
+
+
+.hearts span:nth-child(2) {
+
+    left: 25%;
+
+    animation-delay: 5s;
+
+}
+
+
+.hearts span:nth-child(3) {
+
+    left: 43%;
+
+    animation-delay: 2s;
+
+}
+
+
+.hearts span:nth-child(4) {
+
+    left: 60%;
+
+    animation-delay: 7s;
+
+}
+
+
+.hearts span:nth-child(5) {
+
+    left: 78%;
+
+    animation-delay: 3s;
+
+}
+
+
+.hearts span:nth-child(6) {
+
+    left: 91%;
+
+    animation-delay: 6s;
+
+}
+
+
+/* ==================================================
+   LILIES
+================================================== */
+
+.intro-lily {
+
+    position: absolute;
+
+    color: #a80025;
+
+    font-size: 170px;
+
+    opacity: .18;
+
+    filter:
+        drop-shadow(
+            0 0 25px
+            rgba(255,0,40,.8)
+        );
+
+}
+
+
+.lily-left {
+
+    left: -70px;
+
+    bottom: -60px;
+
+    transform: rotate(-25deg);
+
+}
+
+
+.lily-right {
+
+    right: -70px;
+
+    top: -50px;
+
+    transform: rotate(25deg);
+
+}
+
+
+/* ==================================================
+   MAIN EXPERIENCE
+================================================== */
+
+#mainExperience {
+
+    position: fixed;
+
+    inset: 0;
+
+    width: 100%;
+
+    height: 100vh;
+
+    background: #000;
+
+    overflow: hidden;
+
+}
+
+
+.hidden {
+
+    display: none !important;
+
+}
+
+
+/* ==================================================
+   VIDEO
+================================================== */
+
+.hero-video {
+
+    position: absolute;
+
+    inset: 0;
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+    background: #000;
+
+    z-index: 1;
+
+    transition:
+        opacity .8s ease,
+        transform 1s ease;
+
+}
+
+
+.hero-video.changing {
+
+    opacity: 0;
+
+    transform: scale(1.04);
+
+}
+
+
+/* ==================================================
+   HERO GRADIENT
+================================================== */
+
+.hero-gradient {
+
+    position: absolute;
+
+    z-index: 2;
+
+    inset: 0;
+
+    background:
+
+        linear-gradient(
+            90deg,
+            rgba(0,0,0,.95) 0%,
+            rgba(0,0,0,.7) 25%,
+            rgba(0,0,0,.1) 70%
+        );
+
+}
+
+
+.hero-bottom-gradient {
+
+    position: absolute;
+
+    z-index: 3;
+
+    left: 0;
+
+    right: 0;
+
+    bottom: 0;
+
+    height: 50%;
+
+    background:
+
+        linear-gradient(
+            transparent,
+            rgba(0,0,0,.95)
+        );
+
+}
+
+
+/* ==================================================
+   FILM GRAIN
+================================================== */
+
+.film-grain {
+
+    position: absolute;
+
+    z-index: 50;
+
+    inset: -50%;
+
+    pointer-events: none;
+
+    opacity: .06;
+
+    background-image:
+
+        url(
+            "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='4'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E"
+        );
+
+    animation:
+        grain .2s steps(2)
+        infinite;
+
+}
+
+
+/* ==================================================
+   NAVBAR
+================================================== */
+
+.navbar {
+
+    position: absolute;
+
+    z-index: 100;
+
+    top: 0;
+
+    left: 0;
+
+    right: 0;
+
+    padding: 22px 4%;
+
+    display: flex;
+
+    align-items: center;
+
+    background:
+
+        linear-gradient(
+            rgba(0,0,0,.8),
+            transparent
+        );
+
+}
+
+
+.netflix-logo {
+
+    color: #e50914;
+
+    font-size: 24px;
+
+    font-weight: 800;
+
+    letter-spacing: 3px;
+
+}
+
+
+.navigation {
+
+    display: flex;
+
+    gap: 27px;
+
+    margin-left: 45px;
+
+}
+
+
+.navigation a {
+
+    color: rgba(255,255,255,.7);
+
+    font-size: 12px;
+
+    cursor: pointer;
+
+}
+
+
+.navigation a.active {
+
+    color: #fff;
+
+    font-weight: 600;
+
+}
+
+
+.nav-right {
+
+    margin-left: auto;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 20px;
+
+}
+
+
+.nav-icon {
+
+    border: none;
+
+    background: none;
+
+    color: white;
+
+    font-size: 18px;
+
+    cursor: pointer;
+
+}
+
+
+.profile {
+
+    font-size: 11px;
+
+    color: #ddd;
+
+}
+
+
+/* ==================================================
+   HERO CONTENT
+================================================== */
+
+.hero-content {
+
+    position: absolute;
+
+    z-index: 20;
+
+    left: 5%;
+
+    bottom: 25%;
+
+    width: 620px;
+
+    max-width: 80%;
+
+}
+
+
+.netflix-original {
+
+    font-size: 12px;
+
+    letter-spacing: 3px;
+
+    font-weight: 600;
+
+    margin-bottom: 10px;
+
+}
+
+
+.netflix-original span {
+
+    color: #e50914;
+
+    font-size: 24px;
+
+    font-weight: 900;
+
+    margin-right: 5px;
+
+}
+
+
+.episode-number {
+
+    color: #bbb;
+
+    font-size: 11px;
+
+    letter-spacing: 3px;
+
+    margin-bottom: 10px;
+
+}
+
+
+.hero-content h2 {
+
+    font-family:
+        "Great Vibes",
+        cursive;
+
+    font-size:
+        clamp(70px, 8vw, 120px);
+
+    font-weight: 400;
+
+    line-height: .9;
+
+    margin-bottom: 20px;
+
+    text-shadow:
+        0 4px 25px #000;
+
+}
+
+
+.metadata {
+
+    display: flex;
+
+    gap: 15px;
+
+    font-size: 10px;
+
+    color: #ccc;
+
+    margin-bottom: 17px;
+
+}
+
+
+.metadata .age {
+
+    border: 1px solid #777;
+
+    padding: 2px 5px;
+
+}
+
+
+.hero-content p {
+
+    font-size: 15px;
+
+    line-height: 1.6;
+
+    color: rgba(255,255,255,.75);
+
+    max-width: 500px;
+
+}
+
+
+.hero-buttons {
+
+    display: flex;
+
+    gap: 10px;
+
+    margin-top: 24px;
+
+}
+
+
+.play-button,
+.more-button {
+
+    border: none;
+
+    padding: 12px 24px;
+
+    border-radius: 4px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    transition: .3s;
+
+}
+
+
+.play-button {
+
+    background: white;
+
+    color: black;
+
+}
+
+
+.more-button {
+
+    background:
+        rgba(80,80,80,.7);
+
+    color: white;
+
+}
+
+
+.play-button:hover {
+
+    background: #e50914;
+
+    color: white;
+
+}
+
+
+.more-button:hover {
+
+    background:
+        rgba(255,255,255,.25);
+
+}
+
+
+/* ==================================================
+   NEXT CARD
+================================================== */
+
+.next-card {
+
+    position: absolute;
+
+    z-index: 40;
+
+    right: 5%;
+
+    bottom: 19%;
+
+    width: 230px;
+
+    padding: 18px;
+
+    background:
+        rgba(10,0,2,.8);
+
+    backdrop-filter:
+        blur(15px);
+
+    border-left:
+        2px solid #e50914;
+
+}
+
+
+.next-card-label {
+
+    font-size: 9px;
+
+    color: #888;
+
+    letter-spacing: 3px;
+
+}
+
+
+#nextChapterTitle {
+
+    font-family:
+        "Cormorant Garamond",
+        serif;
+
+    font-size: 26px;
+
+    margin-top: 5px;
+
+}
+
+
+#nextCardButton {
+
+    margin-top: 13px;
+
+    width: 38px;
+
+    height: 38px;
+
+    border: none;
+
+    border-radius: 50%;
+
+    cursor: pointer;
+
+    background: white;
+
+    color: black;
+
+}
+
+
+/* ==================================================
+   PLAYER
+================================================== */
+
+.player {
+
+    position: absolute;
+
+    z-index: 100;
+
+    left: 4%;
+
+    right: 4%;
+
+    bottom: 20px;
+
+}
+
+
+.timeline {
+
+    width: 100%;
+
+    height: 3px;
+
+    background:
+        rgba(255,255,255,.3);
+
+    cursor: pointer;
+
+}
+
+
+.timeline-progress {
+
+    width: 0%;
+
+    height: 100%;
+
+    background: #e50914;
+
+}
+
+
+.player-bottom {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    margin-top: 10px;
+
+}
+
+
+.player-left,
+.player-right {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+}
+
+
+.player-button {
+
+    border: none;
+
+    background: none;
+
+    color: white;
+
+    cursor: pointer;
+
+    font-size: 17px;
+
+}
+
+
+.time {
+
+    font-size: 10px;
+
+    color: #aaa;
+
+}
+
+
+/* ==================================================
+   CHAPTER PANEL
+================================================== */
+
+.chapter-panel {
+
+    position: absolute;
+
+    z-index: 200;
+
+    top: 0;
+
+    right: -400px;
+
+    width: 370px;
+
+    height: 100%;
+
+    background:
+        rgba(5,0,2,.98);
+
+    border-left:
+        1px solid
+        rgba(255,255,255,.1);
+
+    padding: 35px;
+
+    overflow-y: auto;
+
+    transition:
+        right .5s ease;
+
+}
+
+
+.chapter-panel.open {
+
+    right: 0;
+
+}
+
+
+.chapter-heading {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    margin-bottom: 30px;
+
+}
+
+
+.chapter-heading small {
+
+    color: #e50914;
+
+    letter-spacing: 3px;
+
+}
+
+
+.chapter-heading h3 {
+
+    font-family:
+        "Great Vibes",
+        cursive;
+
+    font-size: 40px;
+
+    font-weight: 400;
+
+}
+
+
+.chapter-heading button {
+
+    background: none;
+
+    border: none;
+
+    color: white;
+
+    font-size: 30px;
+
+    cursor: pointer;
+
+}
+
+
+.chapter {
+
+    padding: 18px 0;
+
+    border-bottom:
+        1px solid
+        rgba(255,255,255,.1);
+
+    cursor: pointer;
+
+}
+
+
+.chapter.active {
+
+    color: #e50914;
+
+}
+
+
+.chapter-number {
+
+    font-size: 9px;
+
+    letter-spacing: 3px;
+
+    color: #777;
+
+}
+
+
+.chapter-title {
+
+    font-family:
+        "Cormorant Garamond",
+        serif;
+
+    font-size: 25px;
+
+    margin-top: 5px;
+
+}
+
+
+/* ==================================================
+   SPIDER LILIES
+================================================== */
+
+.spider-lily {
+
+    position: absolute;
+
+    z-index: 10;
+
+    pointer-events: none;
+
+    opacity: .5;
+
+}
+
+
+.spider-left {
+
+    left: 2%;
+
+    bottom: 5%;
+
+}
+
+
+.spider-right {
+
+    right: 2%;
+
+    top: 25%;
+
+    transform: rotate(180deg);
+
+}
+
+
+.flower {
+
+    position: absolute;
+
+    left: -40px;
+
+    top: -35px;
+
+    color: #d30732;
+
+    font-size: 55px;
+
+    text-shadow:
+        0 0 20px
+        rgba(255,0,40,.8);
+
+}
+
+
+.flower span {
+
+    position: absolute;
+
+}
+
+
+.flower span:nth-child(1) {
+
+    left: 0;
+
+}
+
+
+.flower span:nth-child(2) {
+
+    left: 28px;
+
+    top: -25px;
+
+}
+
+
+.flower span:nth-child(3) {
+
+    left: 55px;
+
+}
+
+
+.stem {
+
+    width: 3px;
+
+    height: 170px;
+
+    background: #273e18;
+
+    transform: rotate(-15deg);
+
+}
+
+
+/* ==================================================
+   ENDING
+================================================== */
+
+.ending-screen {
+
+    position: fixed;
+
+    inset: 0;
+
+    z-index: 1000;
+
+    background: #000;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    text-align: center;
+
+}
+
+
+.ending-bg {
+
+    position: absolute;
+
+    inset: 0;
+
+    background:
+
+        radial-gradient(
+            circle at center,
+            rgba(100,0,20,.35),
+            transparent 55%
+        ),
+
+        linear-gradient(
+            #160004,
+            #000
+        );
+
+}
+
+
+.ending-content {
+
+    position: relative;
+
+    z-index: 5;
+
+    max-width: 700px;
+
+    padding: 30px;
+
+}
+
+
+.ending-label {
+
+    color: #777;
+
+    font-size: 10px;
+
+    letter-spacing: 5px;
+
+}
+
+
+.ending-heart {
+
+    color: #e50914;
+
+    font-size: 38px;
+
+    margin: 25px 0;
+
+    animation:
+        heartbeat 2s infinite;
+
+}
+
+
+.ending-content h2 {
+
+    font-family:
+        "Great Vibes",
+        cursive;
+
+    font-weight: 400;
+
+    font-size:
+        clamp(60px, 8vw, 110px);
+
+    line-height: 1;
+
+}
+
+
+.ending-content h2 span {
+
+    color: #b20710;
+
+}
+
+
+.ending-content p {
+
+    margin-top: 30px;
+
+    font-family:
+        "Cormorant Garamond",
+        serif;
+
+    font-size: 22px;
+
+    line-height: 1.5;
+
+    color: #aaa;
+
+}
+
+
+.signature {
+
+    margin-top: 25px;
+
+    font-family:
+        "Great Vibes",
+        cursive;
+
+    font-size: 25px;
+
+}
+
+
+.signature strong {
+
+    display: block;
+
+    color: #e50914;
+
+    font-size: 30px;
+
+}
+
+
+/* ==================================================
+   ANIMATIONS
+================================================== */
+
+@keyframes introZoom {
+
+    from {
+        transform: scale(1);
+    }
+
+    to {
+        transform: scale(1.1);
+    }
+
+}
+
+
+@keyframes heartsUp {
+
+    0% {
+
+        transform:
+            translateY(0)
+            scale(.5);
+
+        opacity: 0;
+
+    }
+
+    20% {
+
+        opacity: .5;
+
+    }
+
+    100% {
+
+        transform:
+            translateY(-110vh)
+            scale(1.2);
+
+        opacity: 0;
+
+    }
+
+}
+
+
+@keyframes grain {
+
+    0% {
+        transform: translate(0,0);
+    }
+
+    25% {
+        transform: translate(2%,-2%);
+    }
+
+    50% {
+        transform: translate(-2%,2%);
+    }
+
+    75% {
+        transform: translate(2%,2%);
+    }
+
+    100% {
+        transform: translate(-2%,-2%);
+    }
+
+}
+
+
+@keyframes heartbeat {
+
+    0%,
+    100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.25);
+    }
+
+}
+
+
+/* ==================================================
+   MOBILE
+================================================== */
+
+@media(max-width:768px) {
+
+
+    .navigation {
+
+        display: none;
+
+    }
+
+
+    .navbar {
+
+        padding: 18px 20px;
+
+    }
+
+
+    .hero-content {
+
+        left: 6%;
+
+        bottom: 25%;
+
+        width: 88%;
+
+        max-width: none;
+
+    }
+
+
+    .hero-content h2 {
+
+        font-size: 65px;
+
+    }
+
+
+    .hero-content p {
+
+        font-size: 14px;
+
+    }
+
+
+    .next-card {
+
+        display: none;
+
+    }
+
+
+    .player {
+
+        left: 5%;
+
+        right: 5%;
+
+    }
+
+
+    .chapter-panel {
+
+        width: 100%;
+
+        right: -100%;
+
+    }
+
+
+    /* ==============================================
+       THEODORE MOBILE INTRO
+       Medium mobile size
+    ============================================== */
+
+    .intro-content h1 {
+
+        font-size: 78px;
+
+        line-height: .85;
+
+        letter-spacing: 1px;
+
+    }
+
+
+    .intro-content p {
+
+        font-size: 21px;
+
+        margin-top: 40px;
+
+        padding: 0 20px;
+
+    }
+
+
+    .intro-label {
+
+        font-size: 10px;
+
+        letter-spacing: 4px;
+
+        margin-bottom: 20px;
+
+    }
+
+
+    .watch-button {
+
+        font-size: 13px;
+
+        padding: 12px 24px;
+
+    }
+
+
+    .spider-lily {
+
+        opacity: .2;
+
+    }
+
+}

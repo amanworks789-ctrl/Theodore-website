@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>THEODORE</title>
+
+    <link rel="stylesheet"
+          href="style.css">
+
+    <!-- Fonts -->
+
+    <link rel="preconnect"
+          href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Great+Vibes&family=Montserrat:wght@300;400;500;600;700&display=swap"
+          rel="stylesheet">
+
+</head>
+
+
+<body>
+
+
+<!-- ==================================================
+     LOADING SCREEN
+================================================== -->
+
+<div id="loadingScreen">
+
+    <div class="loading-logo">
+        THEODORE
+    </div>
+
+    <div class="loading-bar">
+
+        <div id="loadingProgress"></div>
+
+    </div>
+
+</div>
+
+
+
+<!-- ==================================================
+     NETFLIX STYLE INTRO
+================================================== -->
+
+<section id="introScreen"
+         class="intro-screen">
+
+
+    <div class="intro-bg"></div>
+
+    <div class="intro-dark"></div>
+
+
+    <!-- Spider lilies -->
+
+    <div class="intro-lily lily-left">
+        ✽
+    </div>
+
+    <div class="intro-lily lily-right">
+        ✽
+    </div>
+
+
+    <!-- Floating hearts -->
+
+    <div class="hearts">
+
+        <span>♥</span>
+        <span>♡</span>
+        <span>♥</span>
+        <span>♡</span>
+        <span>♥</span>
+        <span>♡</span>
+
+    </div>
+
+
+    <div class="intro-content">
+
+
+        <div class="intro-label">
+            A NETFLIX-STYLE ROMANTIC EXPERIENCE
+        </div>
+
+
+        <h1>
+
+            <span>THE</span>
+
+            <strong>ODORE</strong>
+
+        </h1>
+
+
+        <p>
+            Every moment has a story.
+            <br>
+            This one is ours.
+        </p>
+
+
+        <button id="enterButton"
+                class="watch-button">
+
+            <span>▶</span>
+
+            ENTER
+
+        </button>
+
+
+        <div class="headphone-text">
+            Best experienced with headphones
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ==================================================
+     MAIN NETFLIX EXPERIENCE
+================================================== -->
+
+<main id="mainExperience"
+      class="hidden">
+
+
+    <!-- ==================================================
+         HERO VIDEO
+    ================================================== -->
+
+    <video id="heroVideo"
+           class="hero-video"
+           playsinline
+           preload="auto">
+    </video>
+
+
+    <!-- cinematic gradients -->
+
+    <div class="hero-gradient"></div>
+
+    <div class="hero-bottom-gradient"></div>
+
+
+    <!-- film grain -->
+
+    <div class="film-grain"></div>
+
+
+
+    <!-- ==================================================
+         NAVIGATION
+    ================================================== -->
+
+    <header class="navbar">
+
+
+        <div class="netflix-logo">
+
+            THEODORE
+
+        </div>
+
+
+        <nav class="navigation">
+
+            <a class="active">
+                Home
+            </a>
+
+            <a>
+                Chapters
+            </a>
+
+            <a>
+                Memories
+            </a>
+
+            <a>
+                About
+            </a>
+
+        </nav>
+
+
+        <div class="nav-right">
+
+            <button id="musicButton"
+                    class="nav-icon">
+
+                ♫
+
+            </button>
+
+            <div class="profile">
+
+                ♥ THEO
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+
+    <!-- ==================================================
+         HERO INFORMATION
+    ================================================== -->
+
+    <section class="hero-content">
+
+
+        <div class="netflix-original">
+
+            <span>N</span>
+
+            ORIGINAL
+
+        </div>
+
+
+        <div id="episodeNumber"
+             class="episode-number">
+
+            EPISODE 01
+
+        </div>
+
+
+        <h2 id="episodeTitle">
+
+            THE BEGINNING
+
+        </h2>
+
+
+        <div class="metadata">
+
+            <span>2026</span>
+
+            <span class="age">13+</span>
+
+            <span>CINEMATIC</span>
+
+            <span>♥ ROMANCE</span>
+
+        </div>
+
+
+        <p id="episodeDescription">
+
+            Every beautiful story begins with
+            a single moment.
+
+        </p>
+
+
+        <!-- Hero buttons -->
+
+        <div class="hero-buttons">
+
+
+            <button id="playButton"
+                    class="play-button">
+
+                ▶
+
+                <span>
+                    Play
+                </span>
+
+            </button>
+
+
+            <button id="nextButton"
+                    class="more-button">
+
+                Next
+
+                <span>
+                    →
+                </span>
+
+            </button>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ==================================================
+         RIGHT SIDE NEXT EPISODE
+    ================================================== -->
+
+    <div class="next-card">
+
+
+        <div class="next-card-label">
+
+            NEXT CHAPTER
+
+        </div>
+
+
+        <div id="nextChapterTitle">
+
+            THAT SMILE
+
+        </div>
+
+
+        <button id="nextCardButton">
+
+            ▶
+
+        </button>
+
+    </div>
+
+
+
+    <!-- ==================================================
+         PLAYER
+    ================================================== -->
+
+    <div class="player">
+
+
+        <div id="timeline"
+             class="timeline">
+
+            <div id="timelineProgress"
+                 class="timeline-progress">
+            </div>
+
+        </div>
+
+
+        <div class="player-bottom">
+
+
+            <div class="player-left">
+
+
+                <button id="pauseButton"
+                        class="player-button">
+
+                    ▶
+
+                </button>
+
+
+                <button id="muteButton"
+                        class="player-button">
+
+                    🔊
+
+                </button>
+
+
+                <span id="time"
+                      class="time">
+
+                    00:00 / 00:00
+
+                </span>
+
+
+            </div>
+
+
+            <div class="player-right">
+
+
+                <button id="chaptersButton"
+                        class="player-button">
+
+                    ☰
+
+                </button>
+
+
+                <button id="fullscreenButton"
+                        class="player-button">
+
+                    ⛶
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- ==================================================
+         CHAPTER SIDE PANEL
+    ================================================== -->
+
+    <aside id="chapterPanel"
+           class="chapter-panel">
+
+
+        <div class="chapter-heading">
+
+
+            <div>
+
+                <small>
+                    THEODORE
+                </small>
+
+                <h3>
+                    Chapters
+                </h3>
+
+            </div>
+
+
+            <button id="closePanel">
+
+                ×
+
+            </button>
+
+        </div>
+
+
+        <div id="chapterList"></div>
+
+    </aside>
+
+
+
+    <!-- ==================================================
+         SPIDER LILIES
+    ================================================== -->
+
+    <div class="spider-lily spider-left">
+
+        <div class="flower">
+
+            <span>✽</span>
+            <span>✾</span>
+            <span>✽</span>
+
+        </div>
+
+        <div class="stem"></div>
+
+    </div>
+
+
+    <div class="spider-lily spider-right">
+
+        <div class="flower">
+
+            <span>✽</span>
+            <span>✾</span>
+            <span>✽</span>
+
+        </div>
+
+        <div class="stem"></div>
+
+    </div>
+
+
+</main>
+
+
+
+<!-- ==================================================
+     FINAL SCREEN
+================================================== -->
+
+<section id="endingScreen"
+         class="ending-screen hidden">
+
+
+    <div class="ending-bg"></div>
+
+
+    <div class="ending-content">
+
+
+        <div class="ending-label">
+
+            THEODORE
+
+        </div>
+
+
+        <div class="ending-heart">
+
+            ♥
+
+        </div>
+
+
+        <h2>
+
+            And I would
+
+            <span>
+                choose you
+            </span>
+
+            again.
+
+        </h2>
+
+
+        <p>
+
+            Some stories are written in books.
+
+            <br>
+
+            Ours is written in moments.
+
+            <br><br>
+
+            And somehow,
+            every moment led me here.
+
+        </p>
+
+
+        <div class="signature">
+
+            Forever yours
+
+            <strong>
+                ♥
+            </strong>
+
+        </div>
+
+
+        <button id="replayButton"
+                class="watch-button">
+
+            ↻
+
+            Replay
+
+        </button>
+
+    </div>
+
+</section>
+
+
+
+<!-- ==================================================
+     AUDIO
+================================================== -->
+
+<audio id="backgroundMusic"
+       loop>
+
+    <source src="audio/romantic.mp3"
+            type="audio/mpeg">
+
+</audio>
+
+
+
+<script src="script.js"></script>
+
+</body>
+
+</html>
